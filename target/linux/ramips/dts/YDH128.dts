@@ -72,14 +72,39 @@
 			ralink,function = "gpio";
 		};
 
-		wled_kn {
-			ralink,group = "wled_kn";
-			ralink,function = "gpio";
-		};
-
 		wled_an {
 			ralink,group = "wled_an";
 			ralink,function = "gpio";
+		};
+
+		p0led_an {
+			ralink,group = "p0led_an";
+			ralink,function = "p0led_an";
+		};
+
+		p1led_an {
+			ralink,group = "p1led_an";
+			ralink,function = "p1led_an";
+		};
+
+		p2led_an {
+			ralink,group = "p2led_an";
+			ralink,function = "p2led_an";
+		};
+
+		p3led_an {
+			ralink,group = "p3led_an";
+			ralink,function = "p3led_an";
+		};
+
+		p4led_an {
+			ralink,group = "p4led_an";
+			ralink,function = "p4led_an";
+		};
+
+		uart1 {
+			ralink,group = "uart1";
+			ralink,function = "uart1";
 		};
 
 		wdt {
