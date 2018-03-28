@@ -56,3 +56,28 @@ define Device/mac1200r-v2
   SUPPORTED_DEVICES := mac1200rv2
 endef
 TARGET_DEVICES += mac1200r-v2
+
+define Device/ydh_64MByte
+  DTS := YDH64
+  DEVICE_TITLE := YDH DDR2 64MByte LEDE support
+  DEVICE_PACKAGES := kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport
+  SUPPORTED_DEVICES := ydh_64MByte
+endef
+TARGET_DEVICES += ydh_64MByte
+
+define Device/ydh_128MByte
+  DTS := YDH128
+  DEVICE_TITLE := YDH DDR2 128MByte LEDE support
+  DEVICE_PACKAGES := kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport
+  SUPPORTED_DEVICES := ydh_128MByte
+endef
+TARGET_DEVICES += ydh_128MByte
+
+define Device/ydh_256MByte
+  DTS := YDH256
+  DEVICE_TITLE := YDH DDR2 256MByte LEDE support
+  DEVICE_PACKAGES := kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport
+  SUPPORTED_DEVICES := ydh_256MByte
+endef
+TARGET_DEVICES += ydh_256MByte
+

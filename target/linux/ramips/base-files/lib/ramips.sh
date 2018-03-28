@@ -259,6 +259,15 @@ ramips_board_detect() {
 	*"M4 (8M)")
 		name="m4-8M"
 		;;
+	*"YDH iot Board 64MByte")
+		name="ydh_64MByte"
+		;;
+	*"YDH iot Board 128MByte")
+		name="ydh_128MByte"
+		;;
+	*"YDH iot Board 256MByte")
+		name="ydh_256MByte"
+		;;
 	*"MediaTek LinkIt Smart 7688")
 		linkit="$(dd bs=1 skip=1024 count=12 if=/dev/mtd2 2> /dev/null)"
 		if [ "${linkit}" = "LINKITS7688D" ]; then

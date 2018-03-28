@@ -85,6 +85,9 @@ platform_check_image() {
 	miniembwifi|\
 	miwifi-mini|\
 	miwifi-nano|\
+	ydh_64MByte|\
+	ydh_128MByte|\
+	ydh_256MByte|\
 	mlw221|\
 	mlwg2|\
 	mofi3500-3gn|\

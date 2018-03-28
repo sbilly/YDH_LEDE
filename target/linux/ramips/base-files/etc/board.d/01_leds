@@ -242,6 +242,12 @@ mr-102n)
 	set_wifi_led "$board:green:wlan"
 	set_usb_led "$board:green:usb"
 	;;
+ydh_64MByte|\
+ydh_128MByte|\
+ydh_256MByte)
+	ucidef_set_led_default "power" "power" "ydh:green:power" "1"
+	set_wifi_led "ydh:red:wlan"
+	;;
 mr200)
 	ucidef_set_led_default "power" "power" "$board:white:power" "1"
 	ucidef_set_led_netdev "lan" "lan" "$board:white:lan" "eth0.1"

@@ -252,6 +252,11 @@ get_status_led() {
 	zbt-cpe102)
 		status_led="$board:green:4g-0"
 		;;
+	ydh_64MByte|\
+	ydh_128MByte|\
+	ydh_256MByte)
+		status_led="ydh:green:power"
+		;;	
 	esac
 }
 

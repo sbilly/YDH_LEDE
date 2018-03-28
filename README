@@ -1,29 +1,121 @@
-This is the buildsystem for the LEDE Linux distribution.
+简体中文：
+	此SDK是广州元电荷通信科技有限公司为元电荷YDH Kit 开发板配套发布的LEDE 系统SDK包
+	以下说明只适用于元电荷的YDH Kit开发板，其它厂商的板使用此套系统可能会导致严重后果
 
-Please use "make menuconfig" to choose your preferred
-configuration for the toolchain and firmware.
-
-You need to have installed gcc, binutils, bzip2, flex, python, perl, make,
-find, grep, diff, unzip, gawk, getopt, subversion, libz-dev and libc headers.
-
-Run "./scripts/feeds update -a" to get all the latest package definitions
-defined in feeds.conf / feeds.conf.default respectively
-and "./scripts/feeds install -a" to install symlinks of all of them into
-package/feeds/.
-
-Use "make menuconfig" to configure your image.
-
-Simply running "make" will build your firmware.
-It will download all sources, build the cross-compile toolchain, 
-the kernel and all choosen applications.
-
-To build your own firmware you need to have access to a Linux, BSD or MacOSX system
-(case-sensitive filesystem required). Cygwin will not be supported because of
-the lack of case sensitiveness in the file system.
+	敬告：此系统暂时不适用于256MBit的SPI FLASH
 
 
-Sunshine!
-	Your LEDE Community
-	http://www.lede-project.org
+	Linux kernel Version：4.4.120
+	LEDE Version: LEDE-17.01
+	发布时间：2018-03-28
+
+	元电荷YDH Kit开发板购买地址:
+	https://item.taobao.com/item.htm?spm=a230r.1.14.22.46171b1el9LmZw&id=561138458446&ns=1&abbucket=13#detail
+
+	开发环境：Ubuntu 64位操作系统
+
+	部署开发环境：
+		打开Ubuntu系统的terminal, 然后输入以下命令：
+		sudo apt-get update
+
+		sudo apt-get install gcc g++ binutils patch bzip2 flex bison make autoconf \ 
+	  		gettext texinfo unzip zip unrar p7zip p7zip-rar p7zip-full sharutils subversion \
+			libncurses5-dev ncurses-term zlib1g-dev gawk git-core libssl-dev
+
+		等待软件包安装完成以后，运行以下命令，获取源码：
+		git clone https://github.com/ivotten/YDH_LEDE.git
+
+		更新并安装LEDE的新依赖包
+		./scripts/feeds update -a && ./scripts/feeds update -a
+
+		运行make menuconfig 命令，选择：
+			Target System -->
+				MediaTek Ralink MIPS
+			Target Profile -->
+				YDH DDR2 256MByte LEDE support(此处必须按照你所购买的核心板的配置选择，否则将会导致内核奔溃而无法使用)
+
+		保存并退出
+
+		运行make V=s -j 4编译得到对应的固件
+
+		烧录到开发板测试
+
+繁体中文：
+	此SDK是廣州元電荷通信科技有限公司為元電荷YDH Kit 開發板配套發布的LEDE 系統SDK包
+	以下說明只適用於元電荷的YDH Kit開發板，其它廠商的板使用此套系統可能會導致嚴重後果
+
+	敬告：此系統暫時不適用於256MBit的SPI FLASH
+
+	Linux kernel Version：4.4.120
+	LEDE Version: LEDE-17.01
+	發布時間：2018-03-28
+
+	元電荷YDH Kit開發板購買地址:
+	https://item.taobao.com/item.htm?spm=a230r.1.14.22.46171b1el9LmZw&id=561138458446&ns=1&abbucket=13#detail
+
+	開發環境：Ubuntu 64位操作系統
+
+	部署開發環境：
+		打開Ubuntu系統的terminal, 然後輸入以下命令：
+		sudo apt-get update
+
+		sudo apt-get install gcc g++ binutils patch bzip2 flex bison make autoconf \ 
+			gettext texinfo unzip zip unrar p7zip p7zip-rar p7zip-full sharutils subversion \
+			libncurses5-dev ncurses-term zlib1g-dev gawk git-core libssl-dev
+
+		等待軟件包安裝完成以後，運行以下命令，獲取源碼：
+		git clone https://github.com/ivotten/YDH_LEDE.git
+
+		更新並安裝LEDE的新依賴包
+		./scripts/feeds update -a && ./scripts/feeds update -a
+
+		運行make menuconfig 命令，選擇：
+			Target System -->
+				MediaTek Ralink MIPS
+			Target Profile -->
+				YDH DDR2 256MByte LEDE support(此處必須按照妳所購買的核心板的配置選擇，否則將會導致內核奔潰而無法使用)
+
+		保存並退出
+
+		運行make V=s -j 4編譯得到對應的固件
+
+		燒錄到開發板測試
+
+English:
+	This SDK is based on LEDE system issued by Guangzhou YuanDianHe Technology Co., Ltd. for the meta charge YDH Kit iot development board.
+	The following description is only applicable to the YDH Kit iot development board.
+
+	warning: This System is not support for 256MBit SPI Flsh
 
 
+	Linux kernel Version：4.4.120
+	LEDE Version: LEDE-17.01
+	Release time：2018-03-28
+
+	YDH Kit Iot Board purchase address: https://item.taobao.com/item.htm?spm=a230r.1.14.22.46171b1el9LmZw&id=561138458446&ns=1&abbucket=13#detail
+
+	How to compile?:
+		Ubuntu 16.04 64Bit
+
+		1.install depend
+			sudo apt-get install gcc g++ binutils patch bzip2 flex bison make autoconf \ 
+				gettext texinfo unzip zip unrar p7zip p7zip-rar p7zip-full sharutils subversion \
+				libncurses5-dev ncurses-term zlib1g-dev gawk git-core libssl-dev
+
+		2.download the source use git
+			git clone https://github.com/ivotten/YDH_LEDE.git
+
+		3.update the feeds	
+			./scripts/feeds update -a && ./scripts/feeds update -a					
+
+		4.config
+			Target System -->
+				MediaTek Ralink MIPS
+			Target Profile -->
+				YDH DDR2 256MByte LEDE support (Choosed according to your actual situation )
+
+		5.make 
+			make V=s -j4
+
+		6.image
+			the binary image name like this in bin/targets/ramips/mt7628/: lede-ramips-mt7628-ydh_256MByte-squashfs-sysupgrade.bin
