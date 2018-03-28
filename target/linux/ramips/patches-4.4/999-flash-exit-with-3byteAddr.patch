@@ -1,0 +1,24 @@
+diff -urN a/drivers/mtd/devices/m25p80.c b/drivers/mtd/devices/m25p80.c
+--- a/drivers/mtd/devices/m25p80.c	2018-03-28 17:53:54.262398096 +0800
++++ b/drivers/mtd/devices/m25p80.c	2018-03-28 17:56:20.036890006 +0800
+@@ -261,6 +261,12 @@
+ {
+ 	struct m25p	*flash = spi_get_drvdata(spi);
+ 
++	//refer to manfeel
++	flash->command[0] = 0x66;
++	spi_write(flash->spi, flash->command,1);
++	flash->command[0] = 0x99;
++	spi_write(flash->spi, flash->command,1);
++
+ 	/* Clean up MTD stuff. */
+ 	return mtd_device_unregister(&flash->spi_nor.mtd);
+ }
+@@ -328,6 +334,7 @@
+ 	.id_table	= m25p_ids,
+ 	.probe	= m25p_probe,
+ 	.remove	= m25p_remove,
++	.shutdown = m25p_remove,
+ 
+ 	/* REVISIT: many of these chips have deep power-down modes, which
+ 	 * should clearly be entered on suspend() to minimize power use.

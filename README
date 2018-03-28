@@ -2,9 +2,6 @@
 	此SDK是广州元电荷通信科技有限公司为元电荷YDH Kit 开发板配套发布的LEDE 系统SDK包
 	以下说明只适用于元电荷的YDH Kit开发板，其它厂商的板使用此套系统可能会导致严重后果
 
-	敬告：此系统暂时不适用于256MBit的SPI FLASH
-
-
 	Linux kernel Version：4.4.120
 	LEDE Version: LEDE-17.01
 	发布时间：2018-03-28
@@ -44,8 +41,6 @@
 	此SDK是廣州元電荷通信科技有限公司為元電荷YDH Kit 開發板配套發布的LEDE 系統SDK包
 	以下說明只適用於元電荷的YDH Kit開發板，其它廠商的板使用此套系統可能會導致嚴重後果
 
-	敬告：此系統暫時不適用於256MBit的SPI FLASH
-
 	Linux kernel Version：4.4.120
 	LEDE Version: LEDE-17.01
 	發布時間：2018-03-28
@@ -84,9 +79,6 @@
 English:
 	This SDK is based on LEDE system issued by Guangzhou YuanDianHe Technology Co., Ltd. for the meta charge YDH Kit iot development board.
 	The following description is only applicable to the YDH Kit iot development board.
-
-	warning: This System is not support for 256MBit SPI Flsh
-
 
 	Linux kernel Version：4.4.120
 	LEDE Version: LEDE-17.01
