@@ -62,7 +62,7 @@
 		git clone https://github.com/ivotten/YDH_LEDE.git
 
 		更新並安裝LEDE的新依賴包
-		./scripts/feeds update -a && ./scripts/feeds update -a
+		./scripts/feeds update -a && ./scripts/install update -a
 
 		運行make menuconfig 命令，選擇：
 			Target System -->
@@ -72,7 +72,7 @@
 
 		保存並退出
 
-		運行make V=s -j 4編譯得到對應的固件
+		運行make V=s -j 4編譯得到對應的固件。固件一般在路径 bin/targets/ramips/mt7628/ 中以 lede-ramips-mt7628-ydh_256MByte-squashfs-sysupgrade.bin 这样名字保存的文件保存。
 
 		燒錄到開發板測試
 
@@ -98,7 +98,7 @@ English:
 			git clone https://github.com/ivotten/YDH_LEDE.git
 
 		3.update the feeds	
-			./scripts/feeds update -a && ./scripts/feeds update -a					
+			./scripts/feeds update -a && ./scripts/feeds install -a					
 
 		4.config
 			Target System -->
